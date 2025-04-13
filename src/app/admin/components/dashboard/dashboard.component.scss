@@ -1,0 +1,275 @@
+// .product-list {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+//   gap: 24px;
+//   padding: 24px;
+//   background-color: transparent;
+//   justify-items: center;
+// }
+
+// .product-card {
+//   width: 100%;
+//   height: 100%;
+//   min-height: 420px;
+//   max-width: 400px;
+//   display: flex;
+//   flex-direction: column;
+//   background-color: #ffffff;
+//   border-radius: 16px;
+//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+//   overflow: hidden;
+//   transition: transform 0.2s ease;
+
+//   &:hover {
+//     transform: scale(1.02);
+//   }
+
+//   .product-image {
+//     height: 220px;
+//     width: 100%;
+
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//   }
+
+//   .product-details {
+//     flex: 1;
+//     padding: 20px;
+
+//     .product-name {
+//       font-size: 1.4rem;
+//       font-weight: 600;
+//       color: #1976d2;
+//       margin-bottom: 8px;
+//     }
+
+//     .product-description {
+//       font-size: 14px;
+//       color: #555;
+//       margin-bottom: 12px;
+//       line-height: 1.4;
+//     }
+
+//     .product-info {
+//       margin-top: auto;
+
+//       .info-row {
+//         display: flex;
+//         justify-content: space-between;
+//         font-size: 14px;
+//         margin-top: 6px;
+
+//         .info-label {
+//           font-weight: 500;
+//           color: #444;
+//         }
+
+//         .info-value {
+//           font-weight: 600;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .actions {
+//   display: flex;
+//   gap: 8px;
+//   margin-top: 12px;
+
+//   button {
+//     font-size: 13px;
+//     padding: 4px 12px;
+//     min-height: 32px;
+//     line-height: 1.2;
+//     border-radius: 6px;
+//     box-shadow: none;
+//     text-transform: none;
+//   }
+// }
+
+// .search-form {
+//   display: flex;
+//   justify-content: center;
+//   margin: 30px 0;
+// }
+
+// .search-input {
+//   width: 400px;
+// }
+
+// /* ✅ Updated Search Box Styling */
+// mat-form-field input.mat-input-element {
+//   background-color: white !important;
+//   color: white !important;
+//   border: 1px solid white !important;
+// }
+
+// /* ✅ Optional - Label and focus color styling */
+// mat-form-field .mat-form-field-label {
+//   color: white !important;
+// }
+
+// mat-form-field.mat-focused .mat-form-field-label {
+//   color: white !important;
+// }
+
+// mat-form-field.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+//   color: white !important;
+//   border-color: white !important;
+// }
+
+// mat-form-field.mat-form-field-invalid {
+//   color: white !important;
+//   --mat-mdc-form-field-error-text-color: white;
+// }
+
+/* Search Box Wrapper Styling */
+
+
+/* Product Grid Styling */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 24px;
+  background-color: transparent;
+  justify-items: center;
+}
+
+/* Product Card */
+.product-card {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  .product-image {
+    height: 220px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .product-details {
+    flex: 1;
+    padding: 20px;
+
+    .product-name {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #1976d2;
+      margin-bottom: 8px;
+    }
+
+    .product-description {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .product-info {
+      margin-top: auto;
+
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        margin-top: 6px;
+
+        .info-label {
+          font-weight: 500;
+          color: #444;
+        }
+
+        .info-value {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+/* Buttons Under Cards */
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+
+  button {
+    font-size: 13px;
+    padding: 4px 12px;
+    min-height: 32px;
+    line-height: 1.2;
+    border-radius: 6px;
+    box-shadow: none;
+    text-transform: none;
+  }
+}
+
+/* Search Form Parent Container */
+.search-box-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Actual Form Styling */
+.search-form {
+  background-color: #e3f2fd;
+  padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-form {
+  height: 60px; /* Fixed width including padding */
+}
+
+/* Input Field Size */
+.search-input {
+  width: 400px;
+}
+
+/* Font Size Inside Form */
+mat-form-field {
+  font-size: 14px;
+}
+
+/* Custom Input Style for Text & Border */
+.custom-search-field input {
+  background-color: #e3f2fd !important;
+  color: black !important;
+  border: 1px solid black;
+}
+
+/* Focused State */
+mat-form-field.mat-form-field-appearance-outline.mat-focused
+  .mat-form-field-outline-thick {
+  color: black !important;
+}
+
+/* Invalid State */
+mat-form-field.mat-form-field-invalid {
+  color: black !important;
+  --mat-mdc-form-field-error-text-color: black;
+}

@@ -1,0 +1,30 @@
+.cart-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .cart-badge {
+    background-color: #f44336;
+    color: white;
+    border-radius: 70%;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: -12px; /* Moved it up */
+    right: -8px;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 2px white;
+    z-index: 10;
+  }
+  
+
+  

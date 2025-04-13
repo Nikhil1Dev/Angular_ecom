@@ -1,0 +1,191 @@
+// .container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 90vh;
+// }
+
+// mat-card {
+//   max-width: 400px;
+//   width: 100%;
+//   padding: 20px;
+
+//   @media screen and (max-width: 500px) {
+//     max-width: 90%;
+//   }
+// }
+
+// mat-card-title {
+//   text-align: center;
+//   font-size: 24px;
+//   margin-bottom: 20px;
+// }
+
+// form {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+// mat-form-field {
+//   width: 100%;
+//   margin-bottom: 20px;
+// }
+
+// button {
+//   width: 100%;
+// }
+
+// @media screen and (max-width: 500px) {
+//   mat-card-title {
+//     font-size: 20px;
+//   }
+
+//   mat-form-field {
+//     margin-bottom: 10px;
+//   }
+// }
+
+// .error-snackbar {
+//   background-color: #f44336 !important;
+// }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: transparent;
+
+  @media screen and (max-width: 500px) {
+    padding: 0 15px;
+  }
+}
+
+mat-card {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #e3f2fd;
+
+  @media screen and (max-width: 500px) {
+    max-width: 90%;
+  }
+}
+
+mat-card-title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  color: #333333;
+
+  @media screen and (max-width: 500px) {
+    font-size: 22px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+
+  .mat-form-field-wrapper {
+    border-radius: 8px;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin-bottom: 15px;
+  }
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #2575fc;
+  color: #e3f2fd;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #1a5bb8;
+  }
+
+  &:focus {
+    outline: 2px solid #90caf9;
+    outline-offset: 2px;
+  }
+}
+
+/* Signup prompt styles */
+.links {
+  width: 100%;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #666;
+
+  a {
+    color: #e3f2fd;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.signup {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.9rem;
+  display: flex;
+  margin-top: 10px;
+
+  span {
+    margin-right: 5px;
+    color: #666;
+  }
+
+  a {
+    color: #e3f2fd !important;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* SIGNUP button styles - red text + #e3f2fd bg */
+.signup-button {
+  background-color: #e3f2fd !important;
+  color: red !important;
+  font-weight: 600;
+  text-transform: none;
+
+  &:hover {
+    background-color: #d0e3f7 !important;
+  }
+}
+
+/* Keep eye (visibility toggle) icon color untouched */
+mat-icon-button,
+button.mat-icon-button {
+  color: inherit;
+}
