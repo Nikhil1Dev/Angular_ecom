@@ -1,86 +1,18 @@
-<!-- <div *ngIf="!isCustomerLoggedIn && !isAdminLoggedIn">
-  <mat-toolbar color="primary" class="navbar">
-    <span class="navbar-brand">E-Commerce</span>
-    <span class="spacer"></span>
-    <button mat-button routerLink="/order" routerLinkActive="active">
-      Track Order
-    </button>
-    <button mat-button routerLink="/signup" routerLinkActive="active">
-      Register
-    </button>
-    <button mat-button routerLink="/login" routerLinkActive="active">
-      Login
-    </button>
-  </mat-toolbar>
-</div>
-
-<div *ngIf="isAdminLoggedIn">
-  <mat-toolbar color="primary" class="navbar">
-    <span class="navbar-brand">E-Commerce</span>
-    <span class="spacer"></span>
-    <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">
-      Dashboard
-    </button>
-    <button mat-button routerLink="/admin/analytics" routerLinkActive="active">
-      Analytics
-    </button>
-    <button mat-button routerLink="/admin/category" routerLinkActive="active">
-      Category
-    </button>
-    <button mat-button routerLink="/admin/product" routerLinkActive="active">
-      Product
-    </button>
-    <button mat-button routerLink="/admin/orders" routerLinkActive="active">
-      Orders
-    </button>
-    <button mat-button routerLinkActive="active" (click)="logout()">
-      Logout
-    </button>
-  </mat-toolbar>
-</div>
-
-<div *ngIf="isCustomerLoggedIn">
-  <mat-toolbar color="primary" class="navbar">
-    <span class="navbar-brand">E-Commerce</span>
-    <span class="spacer"></span>
-    <button mat-button routerLink="/customer/dashboard" routerLinkActive="active">
-      Dashboard
-    </button>
-    <button mat-button routerLink="/customer/cart" routerLinkActive="active">
-      Cart
-    </button>
-    <button mat-button routerLink="/customer/my_orders" routerLinkActive="active">
-      Orders
-    </button>
-    <button mat-button routerLink="/customer/whishlist" routerLinkActive="active">
-      Whishlist
-    </button>
-    <button mat-button routerLink="/customer/profile" routerLinkActive="active">
-      Profile
-    </button>
-    <button mat-button routerLinkActive="active" (click)="logout()">
-      Logout
-    </button>
-  </mat-toolbar>
-</div>
-
-<router-outlet></router-outlet> -->
-
-<!-- ✅ Conditional background wrapper -->
 <div [ngClass]="{
   'app-background': !isCustomerLoggedIn && !isAdminLoggedIn,
   'gradient-background': isCustomerLoggedIn || isAdminLoggedIn
 }">
   <div class="page-container">
 
-    <!-- ✅ Guest (Landing) Navbar -->
+    <!-- ✅ Guest Navbar -->
     <div *ngIf="!isCustomerLoggedIn && !isAdminLoggedIn">
       <mat-toolbar class="navbar">
-        <span class="navbar-brand">🚀🛍️ShopZilla</span>
+        <span class="navbar-brand">🚀🛍ShopZilla</span>
+        <!-- <a class="navbar-brand" routerLink="/">🚀🛍ShopZilla</a> -->
         <span class="spacer"></span>
-        <button mat-button routerLink="/order" routerLinkActive="active">Track Order</button>
-        <button mat-button routerLink="/signup" routerLinkActive="active">Register</button>
-        <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
+        <button mat-button routerLink="/order">Track Order</button>
+        <button mat-button routerLink="/signup">Register</button>
+        <button mat-button routerLink="/login">Login</button>
       </mat-toolbar>
 
       <!-- ✅ Hero Section -->
@@ -88,8 +20,9 @@
         <h1>Welcome to ShopZilla</h1>
         <p>Your one-stop shop for all your needs!</p>
         <div class="cta-buttons">
-          <button mat-raised-button class="cta-button shop-btn" (click)="scrollToSection('product-section')">🛒 Shop Now</button>
-          <button mat-raised-button class="cta-button learn-btn" (click)="scrollToSection('product-section')">ℹ Learn More</button>
+          <button mat-raised-button class="cta-button shop-btn" routerLink="/login">🛒 Shop Now</button>
+          <button mat-raised-button class="cta-button learn-btn" (click)="openLearnMoreDialog()">ℹ Learn More</button>
+          <button mat-raised-button class="cta-button help-btn" (click)="openHelpDialog()">💬 Need Help?</button>
         </div>
       </div>
     </div>
@@ -97,7 +30,7 @@
     <!-- ✅ Admin Navbar -->
     <div *ngIf="isAdminLoggedIn">
       <mat-toolbar class="navbar">
-        <span class="navbar-brand">🚀🛍️ShopZilla</span>
+        <span class="navbar-brand">🚀🛍ShopZilla</span>
         <span class="spacer"></span>
         <button mat-button routerLink="/admin/dashboard">Dashboard</button>
         <button mat-button routerLink="/admin/analytics">Analytics</button>
@@ -111,13 +44,10 @@
     <!-- ✅ Customer Navbar -->
     <div *ngIf="isCustomerLoggedIn">
       <mat-toolbar class="navbar">
-        <span class="navbar-brand">🚀🛍️ShopZilla</span>
+        <span class="navbar-brand">🚀🛍ShopZilla</span>
         <span class="spacer"></span>
         <button mat-button routerLink="/customer/dashboard">Dashboard</button>
-
-        <!-- ✅ Replaced old Cart button with cart status component -->
         <app-cart-status></app-cart-status>
-
         <button mat-button routerLink="/customer/my_orders">Orders</button>
         <button mat-button routerLink="/customer/whishlist">Wishlist</button>
         <button mat-button routerLink="/customer/profile">Profile</button>
@@ -126,7 +56,6 @@
     </div>
 
     <!-- ✅ Content Area -->
-    <div id="product-section"></div>
     <div class="main-content">
       <router-outlet></router-outlet>
     </div>

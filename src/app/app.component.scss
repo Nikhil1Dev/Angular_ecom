@@ -29,14 +29,218 @@
 // }
 
 /* ✅ Global Setup */
+// html, body {
+//   height: 100%;
+//   margin: 0;
+//   padding: 0;
+//   font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+// }
+
+// /* ✅ Landing Page Image Background */
+// .app-background {
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   background: url('/assets/8a8fc0d0-7e95-421e-86a2-7d09aec2a2c3.jpg') no-repeat center center;
+//   background-size: cover;
+//   background-attachment: fixed;
+//   position: relative;
+
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(255, 255, 255, 0.35); /* White transparency effect */
+//     z-index: 1;
+//   }
+
+//   > * {
+//     position: relative;
+//     z-index: 2; /* Ensure content is above the overlay */
+//   }
+// }
+
+// /* ✅ Authenticated Pages Gradient Background */
+// .gradient-background {
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   background: linear-gradient(-45deg, #2196f3, #64b5f6, #1976d2, #0d47a1, #82b1ff, #1565c0, #ff4081, #e040fb, #ba68c8);
+//   background-size: 400% 400%;
+//   animation: gradientAnimation 15s ease infinite;
+// }
+
+// /* ✅ Animate Gradient */
+// @keyframes gradientAnimation {
+//   0% {
+//     background-position: 0% 50%;
+//   }
+//   50% {
+//     background-position: 100% 50%;
+//   }
+//   100% {
+//     background-position: 0% 50%;
+//   }
+// }
+
+// /* ✅ Wrapper and Layout */
+// .page-container {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+//   position: relative;
+//   z-index: 1;
+// }
+
+// .main-content {
+//   flex: 1 0 auto;
+//   padding: 1rem;
+//   position: relative;
+//   z-index: 1;
+// }
+
+// app-footer {
+//   flex-shrink: 0;
+//   position: relative;
+//   z-index: 1;
+//   margin-top: auto;
+// }
+
+// /* ✅ Navbar */
+// .navbar {
+//   background-color: #e3f2fd;
+//   color: #0d47a1;
+//   display: flex;
+//   align-items: center;
+//   padding: 0.75rem 1.5rem;
+//   width: 100%;
+//   position: sticky;
+//   top: 0;
+//   z-index: 100;
+//   box-shadow: 0 4px 8px rgba(13, 71, 161, 0.15);
+//   backdrop-filter: blur(8px);
+
+//   .navbar-brand {
+//     font-weight: bold;
+//     font-size: 20px;
+//   }
+
+//   .spacer {
+//     flex-grow: 1;
+//   }
+
+//   button {
+//     color: #0d47a1;
+//     font-weight: 500;
+//     font-size: 15px;
+//     text-transform: capitalize;
+//     padding: 6px 12px;
+//     margin-left: 8px;
+//     border-radius: 6px;
+//     transition: background-color 0.2s ease, border-bottom 0.2s ease;
+
+//     &.active,
+//     &:hover {
+//       font-weight: bold;
+//       border-bottom: 2px solid #0d47a1;
+//       background-color: rgba(13, 71, 161, 0.1);
+//     }
+//   }
+// }
+
+// /* ✅ Hero Section for Landing Page */
+// .hero-section {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   animation: fadeIn 2s ease forwards;
+//   opacity: 0;
+//   padding: 4rem 2rem;
+
+//   h1 {
+//     font-size: 3rem;
+//     margin-bottom: 16px;
+//     font-weight: bold;
+//     color: #212121;
+//     text-shadow: 1px 1px rgba(255, 255, 255, 0.6);
+//   }
+
+//   p {
+//     font-size: 1.5rem;
+//     font-weight: bold;
+//     margin-bottom: 24px;
+//     color: #2f3b42;
+//     text-shadow: 1px 1px rgba(255, 255, 255, 0.4);
+//   }
+
+//   .cta-buttons {
+//     display: flex;
+//     gap: 16px;
+
+//     .cta-button {
+//       padding: 12px 28px;
+//       font-size: 1.1rem;
+//       font-weight: 600;
+//       border: none;
+//       border-radius: 8px;
+//       color: white;
+//       cursor: pointer;
+//       transition: all 0.3s ease;
+//       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+//     }
+
+//     .shop-btn {
+//       background: linear-gradient(135deg, #007aff, #00c6ff);
+//     }
+
+//     .learn-btn {
+//       background: linear-gradient(135deg, #ff416c, #ff4b2b);
+//     }
+
+//     .help-btn {
+//       background: linear-gradient(135deg, #00c853, #64dd17);
+//     }
+
+//     .cta-button:hover {
+//       transform: scale(1.05);
+//       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+//       opacity: 0.95;
+//     }
+//   }
+// }
+
+// /* ✅ Dialog Styling (Optional override) */
+// ::ng-deep .mat-dialog-container {
+//   padding: 24px;
+//   font-size: 15px;
+//   color: #2f2f2f;
+//   line-height: 1.6;
+// }
+
+// ::ng-deep mat-dialog-title {
+//   font-size: 20px;
+//   font-weight: bold;
+//   color: #0d47a1;
+//   margin-bottom: 10px;
+// }
+
+
+
+
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
 }
 
-/* ✅ Landing Page Image Background */
 .app-background {
   min-height: 100vh;
   display: flex;
@@ -51,77 +255,52 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.35); /* White transparency effect */
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
     z-index: 1;
   }
 
   > * {
     position: relative;
-    z-index: 2; /* Ensure content is above the overlay */
+    z-index: 2;
   }
 }
 
-/* ✅ Authenticated Pages Gradient Background */
 .gradient-background {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(-45deg, #2196f3, #64b5f6, #1976d2, #0d47a1, #82b1ff, #1565c0, #ff4081, #e040fb, #ba68c8);
-  background-size: 400% 400%;
+  background: linear-gradient(135deg, #2196f3, #ff4081, #1976d2);
+  background-size: 300% 300%;
   animation: gradientAnimation 15s ease infinite;
 }
 
-/* ✅ Animate Gradient */
 @keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* ✅ Wrapper and Layout */
 .page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  position: relative;
-  z-index: 1;
 }
 
 .main-content {
-  flex: 1 0 auto;
+  flex-grow: 1;
   padding: 1rem;
-  position: relative;
-  z-index: 1;
 }
 
 app-footer {
-  flex-shrink: 0;
-  position: relative;
-  z-index: 1;
   margin-top: auto;
 }
 
-/* ✅ Navbar */
 .navbar {
-  background-color:#e3f2fd ;
+  background-color: #e3f2fd;
   color: #0d47a1;
   display: flex;
   align-items: center;
   padding: 0.75rem 1.5rem;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 100;
   box-shadow: 0 4px 8px rgba(13, 71, 161, 0.15);
-  backdrop-filter: blur(8px);
 
   .navbar-brand {
     font-weight: bold;
@@ -137,87 +316,116 @@ app-footer {
     font-weight: 500;
     font-size: 15px;
     text-transform: capitalize;
-    padding: 6px 12px;
     margin-left: 8px;
     border-radius: 6px;
-    transition: background-color 0.2s ease, border-bottom 0.2s ease;
-
-    &.active,
-    &:hover {
-      font-weight: bold;
-      border-bottom: 2px solid #0d47a1;
-      background-color: rgba(13, 71, 161, 0.1);
-    }
+    transition: background-color 0.2s ease;
   }
 }
 
-/* ✅ Hero Section for Landing Page */
 .hero-section {
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  animation: fadeIn 2s ease forwards;
+  height: calc(100vh - 64px - 60px);
+  animation: fadeIn 2s ease-in-out forwards;
   opacity: 0;
-  padding: 4rem 2rem;
 
   h1 {
     font-size: 3rem;
-    margin-bottom: 16px;
     font-weight: bold;
     color: #212121;
-    text-shadow: 1px 1px rgba(255, 255, 255, 0.6);
+    font-family: 'Playfair Display', serif; /* Premium font */
   }
 
   p {
     font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 24px;
-    color: #2f3b42;
-    text-shadow: 1px 1px rgba(255, 255, 255, 0.4);
+    margin-bottom: 1rem;
+    color: #333;
+    font-family: 'Lora', serif; /* Premium font */
   }
 
-  .cta-buttons {
-    display: flex;
-    gap: 16px;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    .cta-button {
-      padding: 12px 28px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+//   .cta-buttons {
+//     display: flex;
+//     justify-content: center;
+//     gap: 1rem;
+
+//     .cta-button {
+//       font-size: 16px;
+//       font-weight: 600;
+//       padding: 12px 28px;
+//       border-radius: 8px;
+//       color: white;
+//     }
+
+//     .shop-btn {
+//       background: linear-gradient(135deg, #007aff, #00c6ff);
+//     }
+
+//     .learn-btn {
+//       background: linear-gradient(135deg, #ff416c, #ff4b2b);
+//     }
+
+//     .help-btn {
+//       background: linear-gradient(135deg, #00c851, #007e33);
+//     }
+//   }
+// }
+
+
+
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  .cta-button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-size: 200% 200%;
+    animation: gradientShift 6s ease infinite;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
     }
 
-    .shop-btn {
+    &.shop-btn {
       background: linear-gradient(135deg, #007aff, #00c6ff);
     }
 
-    .learn-btn {
+    &.learn-btn {
       background: linear-gradient(135deg, #ff416c, #ff4b2b);
     }
 
-    .cta-button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-      opacity: 0.95;
+    &.help-btn {
+      background: linear-gradient(135deg, #00c851, #007e33);
     }
   }
 }
 
-/* ✅ Fade-in Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(0px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(30);
-  }
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 }
